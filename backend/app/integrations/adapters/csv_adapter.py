@@ -1,6 +1,6 @@
 import io
 import uuid
-from datetime import date, datetime, timezone
+from datetime import date, timezone
 
 import pandas as pd
 

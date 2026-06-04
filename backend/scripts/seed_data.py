@@ -14,8 +14,6 @@ from app.models import (
     IntegrationStatus,
     IntegrationType,
     Product,
-    Report,
-    ReportDelivery,
     Subscription,
     Transaction,
     TransactionItem,
@@ -164,7 +162,7 @@ async def seed():
         print(f"✓ Business: {business.name}")
         print(f"✓ Products: {len(products)}")
         print(f"✓ Customers: {len(customers)}")
-        print(f"✓ ~30 days of transaction data")
+        print("✓ ~30 days of transaction data")
 
 
 if __name__ == "__main__":
