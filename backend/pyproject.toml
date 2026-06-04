@@ -14,6 +14,8 @@ dependencies = [
     "pydantic-settings>=2.5.0",
     "python-jose[cryptography]>=3.3.0",
     "passlib[bcrypt]>=1.7.4",
+    "bcrypt==4.0.1",
+    "email-validator>=2.1.0",
     "python-multipart>=0.0.9",
     "celery[redis]>=5.4.0",
     "redis>=5.1.0",
@@ -41,14 +43,20 @@ dev = [
 
 [tool.ruff]
 target-version = "py312"
-line-length = 100
+line-length = 120
 
 [tool.ruff.lint]
 select = ["E", "F", "I", "N", "W"]
 
+[tool.ruff.lint.per-file-ignores]
+"app/database/migrations/**" = ["E501"]
+
 [tool.pytest.ini_options]
 asyncio_mode = "auto"
 testpaths = ["tests"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["app"]
 
 [build-system]
 requires = ["hatchling"]

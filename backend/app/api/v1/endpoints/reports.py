@@ -82,7 +82,7 @@ async def get_dashboard(
     from sqlalchemy import func
 
     from app.models.integration import Integration
-    from app.models.report import Report, ReportDelivery
+    from app.models.report import ReportDelivery
     from app.models.subscription import Subscription
     from app.repositories.transaction_repository import TransactionRepository
 
